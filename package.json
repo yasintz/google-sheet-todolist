@@ -1,0 +1,32 @@
+{
+  "name": "word-excel",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "yasintz",
+  "license": "MIT",
+  "scripts": {
+    "build-dev": "browserify src/index.ts -p tsify  > editor/bundle.js && node scripts/make-bundle.js",
+    "build-prod": "browserify src/index.ts -p tsify -g unassertify -g envify -g uglifyify -p common-shakeify -p browser-pack-flat/plugin | uglifyjs -cm > editor/bundle.js && node scripts/make-bundle.js",
+    "build": "yarn build-dev",
+    "watch": "nodemon"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "babelify": "^10.0.0",
+    "browser-pack-flat": "^3.4.2",
+    "browserify": "^16.5.1",
+    "common-shakeify": "^0.6.2",
+    "envify": "^4.1.0",
+    "nodemon": "^2.0.3",
+    "tinyify": "^2.5.2",
+    "tsify": "^4.0.1",
+    "typescript": "^3.8.3",
+    "uglify-js": "^3.9.2",
+    "uglifyify": "^5.0.2",
+    "unassertify": "^2.1.1"
+  },
+  "dependencies": {
+    "await-to-js": "^2.1.1",
+    "clipboardy": "^2.3.0"
+  }
+}
