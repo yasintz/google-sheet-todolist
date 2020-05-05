@@ -10,7 +10,7 @@ function shuffleArray(array) {
     array[j] = temp;
   }
 }
-const WORDS = shuffleArray(
+var WORDS = shuffleArray(
   JSON.parse(
     UrlFetchApp.fetch(
       'https://gist.githubusercontent.com/yasintz/f3ac157625723c12dd27037b33d2b2df/raw/f729b64109436621e8b7272793f2a00abd636a0a/wods.json'

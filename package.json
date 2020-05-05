@@ -7,7 +7,7 @@
   "scripts": {
     "build-dev": "browserify src/index.ts -p tsify  > editor/bundle.js && node scripts/make-bundle.js",
     "build-prod": "browserify src/index.ts -p tsify -g unassertify -g envify -g uglifyify -p common-shakeify -p browser-pack-flat/plugin | uglifyjs -cm > editor/bundle.js && node scripts/make-bundle.js",
-    "build": "yarn build-dev",
+    "build": "yarn build-prod",
     "watch": "nodemon"
   },
   "devDependencies": {

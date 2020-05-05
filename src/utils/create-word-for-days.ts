@@ -1,4 +1,4 @@
-import { addDays } from './utils/date';
+import { addDays } from './date';
 
 export default function createWordForDays(words: string[], dayCount: number) {
   const copyWords = Array.from(words);
@@ -28,7 +28,7 @@ export default function createWordForDays(words: string[], dayCount: number) {
       180: 11,
       210: 12,
       250: 14,
-      300: 14,
+      300: 15,
     };
     itemLength = maps[wordsByDay.length as any] || itemLength;
   }
